@@ -1,13 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { StateProvider } from "./StateProvider";
+import reducer, { instialState } from "./reducer";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StateProvider reducer={reducer} initialState={instialState}>
+      <App />
+    </StateProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

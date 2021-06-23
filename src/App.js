@@ -1,8 +1,8 @@
-
-import React from "react"
-import './App.css';
-import { BrowserRouter as Router, Switch,Route } from "react-router-dom";
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
+import Home from "./Home";
 function App() {
   return (
     <Router>
@@ -15,14 +15,12 @@ function App() {
             <h1>Login Page</h1>
           </Route>
           <Route path="/">
-          <Header />
-            <h1>Home page</h1>
-
+            <Header />
+            <Home />
           </Route>
         </Switch>
-    </div>
+      </div>
     </Router>
-    
   );
 }
 
